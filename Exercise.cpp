@@ -19,7 +19,7 @@ public:
 	float getWeight();
 	int getReps();
 	int getSets();
-	virtual void provingOverride();
+	virtual void exerciseType()=0;
 };
 
 
@@ -67,8 +67,4 @@ int Exercise::getReps(){
 
 int Exercise::getSets(){
 	return sets;
-}
-
-void Exercise::provingOverride(){
-	cout<<"Father";
 }

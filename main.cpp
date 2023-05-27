@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #include "Exercise.cpp"
 #include "Back.cpp"
 #include "Biceps.cpp"
@@ -8,14 +9,23 @@
 #include "Deltoid.cpp"
 #include "Cuadricep.cpp"
 #include "Twin.cpp"
+#include "Leg.cpp"
+#include "Pull.cpp"
+#include "Push.cpp"
+#include "Rutine.cpp"
 
 using namespace std;
 
 int main(){
-    Exercise ex("curl",20,8,1);
-    Tricep dom("Head Breaker",10,8,3);
-    cout<<dom.getName();
-    ex.provingOverride();
-    dom.provingOverride();
-    dom.Exercise::provingOverride();
+    //Polimorfismo
+    vector <Exercise*> exercises;
+    exercises.push_back(new Back("Remo",30,11,4));
+    exercises.push_back(new Bicep("Curl",20,8,4));
+    exercises.push_back(new Tricep("Rompe Craneos",20,8,4));
+
+    vector<Exercise*>::const_iterator i;
+    for(i=exercises.begin();i!=exercises.end();i++){
+        (*i)->exerciseType();
+    }
+    return 0;
 }
