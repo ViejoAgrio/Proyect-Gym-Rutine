@@ -20,5 +20,5 @@ Cuadricep::Cuadricep(string name1, float weight1, int reps1, int sets1){
 }
 
 void Cuadricep::exerciseType(){
-    cout<<"Cuadricep"<<endl;
+    cout<<"(Cuadricep) ";
 }

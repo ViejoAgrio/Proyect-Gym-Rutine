@@ -20,5 +20,5 @@ Chest::Chest(string name1, float weight1, int reps1, int sets1){
 }
 
 void Chest::exerciseType(){
-    cout<<"Chest"<<endl;
+    cout<<"(Chest) ";
 }

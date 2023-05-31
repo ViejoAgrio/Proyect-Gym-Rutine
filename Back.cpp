@@ -20,5 +20,5 @@ Back::Back(string name1, float weight1, int reps1, int sets1){
 }
 
 void Back::exerciseType(){
-    cout<<"Back"<<endl;
+    cout<<"(Back) ";
 }

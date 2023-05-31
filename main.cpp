@@ -17,31 +17,16 @@
 using namespace std;
 
 int main(){
-    //Polimorfismo
-
-    /*vector <Exercise*> exercises;
-    exercises.push_back(new Chest("Remo",30,11,4));
-    exercises.push_back(new Chest("Curl",20,8,4));
-    exercises.push_back(new Deltoid("Rompe Craneos",20,8,4));
-    exercises.push_back(new Deltoid("Rompe Craneos",20,8,4));
-    exercises.push_back(new Deltoid("Rompe Craneos",20,8,4));
-
-    vector<Exercise*>::const_iterator i;
-    for(i=exercises.begin();i!=exercises.end();i++){
-        (*i)->exerciseType();
-    }*/
-
     Chest benchPress("Bench Press", 60, 8, 4);
     Chest deeps("Deeps", 25, 10, 3);
     Deltoid militaryPress("Military Press", 30, 8, 4);
     Deltoid lateralRaises("Lateral Raises", 25, 16, 4);
     Deltoid ropeLateralRaises("Rope Lateral Raises", 10, 16, 3);
     Push monday(benchPress, deeps, militaryPress, lateralRaises, ropeLateralRaises);
-    //cout<<monday.getChestName();
 
-    /*vector <Exercise*> exercises;
-    exercises.push_back(&militaryPress);
-    exercises[0]->exerciseType();*/
+    /*vector <Exercise*> pushExercises;
+    pushExercises.push_back(&militaryPress);
+    pushExercises[0]->exerciseType();*/
 
     Back remo("Remo",30,11,4);
     Back latPulldowns("LatPulldowns",174,10,4);
@@ -55,8 +40,31 @@ int main(){
 
     Rutine rutine1(monday, wednesday, friday);
 
-    rutine1.printInfo();
-    
+    //Polimorfismo
+
+    vector <Exercise*> pushExercises;
+    pushExercises.push_back(&benchPress);
+    pushExercises.push_back(&deeps);
+    pushExercises.push_back(&militaryPress);
+    pushExercises.push_back(&lateralRaises);
+    pushExercises.push_back(&ropeLateralRaises);
+
+    vector <Exercise*> pullExercises;
+    pullExercises.push_back(&remo);
+    pullExercises.push_back(&latPulldowns);
+    pullExercises.push_back(&curl);
+
+    vector <Exercise*> legExercises;
+    legExercises.push_back(&legExtension);
+    legExercises.push_back(&hipThrust);
+    legExercises.push_back(&twinsExtension);
+
+    /*vector<Exercise*>::const_iterator i;
+    for(i=pushExercises.begin();i!=pushExercises.end();i++){
+        (*i)->exerciseType();
+    }*/
+
+    rutine1.printLeg(legExercises);
 
     return 0;
 }

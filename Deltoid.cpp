@@ -20,5 +20,5 @@ Deltoid::Deltoid(string name1, float weight1, int reps1, int sets1){
 }
 
 void Deltoid::exerciseType(){
-    cout<<"Deltoid"<<endl;
+    cout<<"(Deltoid) ";
 }

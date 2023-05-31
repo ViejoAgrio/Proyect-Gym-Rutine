@@ -20,5 +20,5 @@ Tricep::Tricep(string name1, float weight1, int reps1, int sets1){
 }
 
 void Tricep::exerciseType(){
-    cout<<"Tricep"<<endl;
+    cout<<"(Tricep) ";
 }

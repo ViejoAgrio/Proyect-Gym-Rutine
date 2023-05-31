@@ -5,9 +5,8 @@ class Push{
     public:
     Push(Chest, Chest, Deltoid, Deltoid, Deltoid);
     Push();
-    //string getChestName();
     Chest getChest(int);
-    Deltoid getDealtoid(int);
+    Deltoid getDeltoid(int);
 };
 
 Push::Push(Chest chest1, Chest chest2, Deltoid deltoid1, Deltoid deltoid2, Deltoid deltoid3){
@@ -28,14 +27,10 @@ Push::Push(){
     deltoid[2]=deltoid1;
 }
 
-/*string Push::getChestName(){
-    return chest[0].getName();
-}*/
-
 Chest Push::getChest(int n){
     return chest[n];
 }
 
-Deltoid Push::getDealtoid(int n){
+Deltoid Push::getDeltoid(int n){
     return deltoid[n];
 }
