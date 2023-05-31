@@ -20,6 +20,7 @@ public:
 	int getReps();
 	int getSets();
 	virtual void exerciseType()=0;
+	void printAll();
 };
 
 
@@ -67,4 +68,8 @@ int Exercise::getReps(){
 
 int Exercise::getSets(){
 	return sets;
+}
+
+void Exercise::printAll(){
+	cout<<name<<" || Weight: "<<weight<<" Sets: "<<sets<<" Reps: "<<reps<<endl;
 }
