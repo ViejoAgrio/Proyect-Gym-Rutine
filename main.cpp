@@ -5,7 +5,6 @@
 #include "Back.cpp"
 #include "Biceps.cpp"
 #include "Chest.cpp"
-#include "Tricep.cpp"
 #include "Deltoid.cpp"
 #include "Cuadricep.cpp"
 #include "Twin.cpp"
@@ -64,7 +63,9 @@ int main(){
         (*i)->exerciseType();
     }*/
 
-    rutine1.printLeg(legExercises);
+    string pushrutine;
+    pushrutine=rutine1.allRutine();
+    cout<<pushrutine;
 
     return 0;
 }

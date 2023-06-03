@@ -1,9 +1,9 @@
 #include <iostream>
-#include<string>
+#include <string>
 using namespace std;
 
 class Exercise{
-private: 
+protected: 
 	string name;
 	float weight;
 	int reps;
@@ -21,6 +21,7 @@ public:
 	int getSets();
 	virtual void exerciseType()=0;
 	void printAll();
+	string printInfo();
 };
 
 
@@ -72,4 +73,9 @@ int Exercise::getSets(){
 
 void Exercise::printAll(){
 	cout<<name<<" || Weight: "<<weight<<" Sets: "<<sets<<" Reps: "<<reps<<endl;
+	
+}
+
+string Exercise::printInfo(){
+	return "|| Weight: " + std::to_string(weight) + " Sets: " + std::to_string(sets) + " Reps: "+ std::to_string(reps) + "\n";
 }

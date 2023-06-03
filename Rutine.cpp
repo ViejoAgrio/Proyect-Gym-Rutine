@@ -5,13 +5,13 @@ class Rutine{
     Leg leg;
     public:
     Rutine(Push, Pull, Leg);
-    void printPush();
+    string printPush();
     void printPush(vector <Exercise*>);
-    void printPull();
+    string printPull();
     void printPull(vector <Exercise*>);
-    void printLeg();
+    string printLeg();
     void printLeg(vector <Exercise*>);
-    void printInfo();
+    string allRutine();
 };
 
 Rutine::Rutine(Push push1, Pull pull1, Leg leg1){
@@ -20,12 +20,13 @@ Rutine::Rutine(Push push1, Pull pull1, Leg leg1){
     leg=leg1;
 }
 
-void Rutine::printPush(){
-    push.getChest(0).printAll();
-    push.getChest(1).printAll();
-    push.getDeltoid(0).printAll();
-    push.getDeltoid(1).printAll();
-    push.getDeltoid(2).printAll();
+string Rutine::printPush(){
+    string chest1=push.getChest(0).printInfo();
+    string chest2=push.getChest(1).printInfo();
+    string deltoid1=push.getDeltoid(0).printInfo();
+    string deltoid2=push.getDeltoid(1).printInfo();
+    string deltoid3=push.getDeltoid(2).printInfo();
+    return chest1 + chest2 + deltoid1 + deltoid2 + deltoid3;
 }
 
 void Rutine::printPush(vector<Exercise*> pushExercises){
@@ -41,10 +42,11 @@ void Rutine::printPush(vector<Exercise*> pushExercises){
     push.getDeltoid(2).printAll();
 }
 
-void Rutine::printPull(){
-    pull.getBack(0).printAll();
-    pull.getBack(1).printAll();
-    pull.getBicep().printAll();
+string Rutine::printPull(){
+    string pull1=pull.getBack(0).printInfo();
+    string pull2=pull.getBack(1).printInfo();
+    string bicep1=pull.getBicep().printInfo();
+    return pull1 + pull2 + bicep1;
 }
 
 void Rutine::printPull(vector <Exercise*> pullExercises){
@@ -56,10 +58,11 @@ void Rutine::printPull(vector <Exercise*> pullExercises){
     pull.getBicep().printAll();
 }
 
-void Rutine::printLeg(){
-    leg.getCuadricep(0).printAll();
-    leg.getCuadricep(1).printAll();
-    leg.getTwin().printAll();
+string Rutine::printLeg(){
+    string leg1=leg.getCuadricep(0).printInfo();
+    string leg2=leg.getCuadricep(1).printInfo();
+    string twin1=leg.getTwin().printInfo();
+    return leg1 + leg2 + twin1;
 }
 
 void Rutine::printLeg(vector <Exercise*> legExercises){
@@ -71,11 +74,6 @@ void Rutine::printLeg(vector <Exercise*> legExercises){
     leg.getTwin().printAll();
 }
 
-void Rutine::printInfo(){
-    cout<<"Monday Rutine\n"<<endl;
-    printPush();
-    cout<<"\nWednesday Rutine\n"<<endl;
-    printPull();
-    cout<<"\nFriday Rutine\n"<<endl;
-    printLeg();
+string Rutine::allRutine(){
+    return "Monday Rutine\n" + printPush() + "\nWednesday Rutine\n" + printPull() + "\nFriday Rutine\n" + printLeg();
 }
