@@ -7,6 +7,7 @@ class Push{
     Push();
     Chest getChest(int);
     Deltoid getDeltoid(int);
+    void operator++();
 };
 
 Push::Push(Chest chest1, Chest chest2, Deltoid deltoid1, Deltoid deltoid2, Deltoid deltoid3){
@@ -34,3 +35,12 @@ Chest Push::getChest(int n){
 Deltoid Push::getDeltoid(int n){
     return deltoid[n];
 }
+
+void Push::operator++(){
+    this->chest[0].setReps(this->chest[0].getReps()+1);
+    this->chest[1].setReps(this->chest[1].getReps()+1);
+    this->deltoid[0].setReps(this->deltoid[0].getReps()+1);
+    this->deltoid[1].setReps(this->deltoid[1].getReps()+1);
+    this->deltoid[2].setReps(this->deltoid[2].getReps()+1);
+}
+

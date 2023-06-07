@@ -2,7 +2,7 @@ class Back : public Exercise{
     public:
     Back();
     Back(string, float, int, int);
-    void exerciseType() override;
+    string exerciseType() override;
 };
 
 Back::Back(){
@@ -19,6 +19,6 @@ Back::Back(string name1, float weight1, int reps1, int sets1){
     setSets(sets1);
 }
 
-void Back::exerciseType(){
-    cout<<"(Back) ";
+string Back::exerciseType(){
+    return "(Back) ";
 }

@@ -7,6 +7,7 @@ class Pull{
     Pull();
     Back getBack(int);
     Bicep getBicep();
+    void operator++();
 };
 
 Pull::Pull(Back back1, Back back2, Bicep bicep1){
@@ -31,4 +32,8 @@ Bicep Pull::getBicep(){
     return bicep;
 }
 
-
+void Pull::operator++(){
+    this->back[0].setReps(this->back[0].getReps()+1);
+    this->back[1].setReps(this->back[1].getReps()+1);
+    this->bicep.setReps(this->bicep.getReps()+1);
+}

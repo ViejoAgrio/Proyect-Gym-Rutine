@@ -23,10 +23,6 @@ int main(){
     Deltoid ropeLateralRaises("Rope Lateral Raises", 10, 16, 3);
     Push monday(benchPress, deeps, militaryPress, lateralRaises, ropeLateralRaises);
 
-    /*vector <Exercise*> pushExercises;
-    pushExercises.push_back(&militaryPress);
-    pushExercises[0]->exerciseType();*/
-
     Back remo("Remo",30,11,4);
     Back latPulldowns("LatPulldowns",174,10,4);
     Bicep curl("Curl",30,8,4);
@@ -58,14 +54,56 @@ int main(){
     legExercises.push_back(&hipThrust);
     legExercises.push_back(&twinsExtension);
 
-    /*vector<Exercise*>::const_iterator i;
-    for(i=pushExercises.begin();i!=pushExercises.end();i++){
-        (*i)->exerciseType();
-    }*/
+    cout<<"This is your weeek routine"<<endl;
+    cout<<rutine1.allRutine()<<endl;
 
-    string pushrutine;
-    pushrutine=rutine1.allRutine();
-    cout<<pushrutine;
-
-    return 0;
+    int opcion=0;
+    while (opcion!=4)
+    {
+        cout<<"Introduce 1, 2 or 3 to watch specifically push, pull or Leg routine, introduce 4 to end program"<<endl;
+        cin>>opcion;
+            switch (opcion)
+        {
+        case 1:
+            cout<<rutine1.printPush(pushExercises)<<endl;
+            cout<<"Want a new challenge? introduce 1 to make it harder, otherwise 0 to keep this difficult"<<endl;
+            cin>>opcion;
+            if (opcion==1)
+            {
+                cout<<"Routine updated"<<endl;
+                monday.operator++();
+                rutine1.setPush(monday);
+            }
+            break;
+        case 2:
+            cout<<rutine1.printPull(pullExercises)<<endl;
+            cout<<"Want a new challenge? introduce 1 to make it harder, otherwise 0 to keep this difficult"<<endl;
+            cin>>opcion;
+            if (opcion==1)
+            {
+                cout<<"Routine updated"<<endl;
+                wednesday.operator++();
+                rutine1.setPull(wednesday);
+            }
+            break;
+        case 3:
+            cout<<rutine1.printLeg(legExercises)<<endl;
+            cout<<"Want a new challenge? introduce 1 to make it harder, otherwise 0 to keep this difficult"<<endl;
+            cin>>opcion;
+            if (opcion==1)
+            {
+                cout<<"Routine updated"<<endl;
+                friday.operator++();
+                rutine1.setLeg(friday);
+            }
+            break;
+        case 4:
+            cout<<rutine1.allRutine()<<endl;
+            return 0;
+        
+        default:
+            cout<<"Invalid input, try again"<<endl;
+            break;
+        }
+    }
 }

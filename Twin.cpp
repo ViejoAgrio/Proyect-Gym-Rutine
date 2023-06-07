@@ -2,7 +2,7 @@ class Twin : public Exercise{
     public:
     Twin();
     Twin(string, float, int, int);
-    void exerciseType() override;
+    string exerciseType() override;
 };
 
 Twin::Twin(){
@@ -19,6 +19,6 @@ Twin::Twin(string name1, float weight1, int reps1, int sets1){
     setSets(sets1);
 }
 
-void Twin::exerciseType(){
-    cout<<"(Twin) ";
+string Twin::exerciseType(){
+    return "(Twin) ";
 }

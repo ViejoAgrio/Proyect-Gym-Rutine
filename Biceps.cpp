@@ -2,7 +2,7 @@ class Bicep : public Exercise{
     public:
     Bicep();
     Bicep(string, float, int, int);
-    void exerciseType() override;
+    string exerciseType() override;
 };
 
 Bicep::Bicep(){
@@ -19,6 +19,6 @@ Bicep::Bicep(string name1, float weight1, int reps1, int sets1){
     setSets(sets1);
 }
 
-void Bicep::exerciseType(){
-    cout<<"(Bicep) ";
+string Bicep::exerciseType(){
+    return "(Bicep) ";
 }

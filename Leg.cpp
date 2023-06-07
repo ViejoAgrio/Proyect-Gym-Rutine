@@ -7,6 +7,7 @@ class Leg{
     Leg();
     Cuadricep getCuadricep(int);
     Twin getTwin();
+    void operator++();
 };
 
 Leg::Leg(Cuadricep Cuadricep1, Cuadricep Cuadricep2, Twin Twin1){
@@ -29,4 +30,10 @@ Cuadricep Leg::getCuadricep(int n){
 
 Twin Leg::getTwin(){
     return twin;
+}
+
+void Leg::operator++(){
+    this->cuadricep[0].setReps(this->cuadricep[0].getReps()+1);
+    this->cuadricep[1].setReps(this->cuadricep[1].getReps()+1);
+    this->twin.setReps(this->twin.getReps()+1);
 }

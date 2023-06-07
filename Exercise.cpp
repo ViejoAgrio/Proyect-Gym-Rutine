@@ -19,8 +19,7 @@ public:
 	float getWeight();
 	int getReps();
 	int getSets();
-	virtual void exerciseType()=0;
-	void printAll();
+	virtual string exerciseType()=0;
 	string printInfo();
 };
 
@@ -69,13 +68,8 @@ int Exercise::getReps(){
 
 int Exercise::getSets(){
 	return sets;
-}
-
-void Exercise::printAll(){
-	cout<<name<<" || Weight: "<<weight<<" Sets: "<<sets<<" Reps: "<<reps<<endl;
-	
-}
+}	
 
 string Exercise::printInfo(){
-	return "|| Weight: " + std::to_string(weight) + " Sets: " + std::to_string(sets) + " Reps: "+ std::to_string(reps) + "\n";
+	return name + " || Weight: " + std::to_string(weight) + " Sets: " + std::to_string(sets) + " Reps: "+ std::to_string(reps) + "\n";
 }

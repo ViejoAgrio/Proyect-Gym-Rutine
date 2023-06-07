@@ -2,7 +2,7 @@ class Deltoid : public Exercise{
     public:
     Deltoid();
     Deltoid(string, float, int, int);
-    void exerciseType() override;
+    string exerciseType() override;
 };
 
 Deltoid::Deltoid(){
@@ -19,6 +19,6 @@ Deltoid::Deltoid(string name1, float weight1, int reps1, int sets1){
     setSets(sets1);
 }
 
-void Deltoid::exerciseType(){
-    cout<<"(Deltoid) ";
+string Deltoid::exerciseType(){
+    return "(Deltoid) ";
 }
