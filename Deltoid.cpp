@@ -2,7 +2,7 @@ class Deltoid : public Exercise{
     public:
     Deltoid();
     Deltoid(string, float, int, int);
-    string exerciseType() override;
+    string exerciseType() override; //Sobre escritura
 };
 
 Deltoid::Deltoid(){

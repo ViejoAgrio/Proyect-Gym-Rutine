@@ -2,7 +2,7 @@ class Chest : public Exercise{
     public:
     Chest();
     Chest(string, float, int, int);
-    string exerciseType() override;
+    string exerciseType() override; //Sobre escritura
 };
 
 Chest::Chest(){

@@ -19,7 +19,7 @@ public:
 	float getWeight();
 	int getReps();
 	int getSets();
-	virtual string exerciseType()=0;
+	virtual string exerciseType()=0; //Clase abstracta
 	string printInfo();
 };
 

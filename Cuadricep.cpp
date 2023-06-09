@@ -2,7 +2,7 @@ class Cuadricep : public Exercise{
     public:
     Cuadricep();
     Cuadricep(string, float, int, int);
-    string exerciseType() override;
+    string exerciseType() override; //Sobre escritura
 };
 
 Cuadricep::Cuadricep(){

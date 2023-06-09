@@ -2,7 +2,7 @@ class Twin : public Exercise{
     public:
     Twin();
     Twin(string, float, int, int);
-    string exerciseType() override;
+    string exerciseType() override; //Sobre escritura
 };
 
 Twin::Twin(){

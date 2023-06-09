@@ -7,7 +7,7 @@ class Pull{
     Pull();
     Back getBack(int);
     Bicep getBicep();
-    void operator++();
+    void operator++(); //Sobre carga de operadores
 };
 
 Pull::Pull(Back back1, Back back2, Bicep bicep1){

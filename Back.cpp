@@ -2,7 +2,7 @@ class Back : public Exercise{
     public:
     Back();
     Back(string, float, int, int);
-    string exerciseType() override;
+    string exerciseType() override; //Sobre escritura
 };
 
 Back::Back(){

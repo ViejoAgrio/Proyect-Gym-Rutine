@@ -16,6 +16,7 @@
 using namespace std;
 
 int main(){
+    //Uso de clases concretas
     Chest benchPress("Bench Press", 60, 8, 4);
     Chest deeps("Deeps", 25, 10, 3);
     Deltoid militaryPress("Military Press", 30, 8, 4);
@@ -35,7 +36,8 @@ int main(){
 
     Rutine rutine1(monday, wednesday, friday);
 
-    //Polimorfismo
+    //Polimorfismo y clase abstracta: creamos un vector de apuntadores de nuestra clase abstracta en el que almacenamos apuntadores 
+    //de las clases hijas
 
     vector <Exercise*> pushExercises;
     pushExercises.push_back(&benchPress);
@@ -65,35 +67,38 @@ int main(){
             switch (opcion)
         {
         case 1:
-            cout<<rutine1.printPush(pushExercises)<<endl;
+            cout<<rutine1.printPush(pushExercises)<<endl; //Función con sobre carga de atributos, la otra version de la función 
+            //se usa dentro de la funcion allRutine(), método de la clase Rutine
             cout<<"Want a new challenge? introduce 1 to make it harder, otherwise 0 to keep this difficult"<<endl;
             cin>>opcion;
             if (opcion==1)
             {
                 cout<<"Routine updated"<<endl;
-                monday.operator++();
+                ++monday; //Sobre carga de operadores
                 rutine1.setPush(monday);
             }
             break;
         case 2:
-            cout<<rutine1.printPull(pullExercises)<<endl;
+            cout<<rutine1.printPull(pullExercises)<<endl; //Función con sobre carga de atributos, la otra version de la función 
+            //se usa dentro de la funcion allRutine(), método de la clase Rutine
             cout<<"Want a new challenge? introduce 1 to make it harder, otherwise 0 to keep this difficult"<<endl;
             cin>>opcion;
             if (opcion==1)
             {
                 cout<<"Routine updated"<<endl;
-                wednesday.operator++();
+                ++wednesday; //Sobre carga de operadores
                 rutine1.setPull(wednesday);
             }
             break;
         case 3:
-            cout<<rutine1.printLeg(legExercises)<<endl;
+            cout<<rutine1.printLeg(legExercises)<<endl; //Función con sobre carga de atributos, la otra version de la función 
+            //se usa dentro de la funcion allRutine(), método de la clase Rutine
             cout<<"Want a new challenge? introduce 1 to make it harder, otherwise 0 to keep this difficult"<<endl;
             cin>>opcion;
             if (opcion==1)
             {
                 cout<<"Routine updated"<<endl;
-                friday.operator++();
+                ++friday; //Sobre carga de operadores
                 rutine1.setLeg(friday);
             }
             break;

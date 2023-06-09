@@ -7,7 +7,7 @@ class Push{
     Push();
     Chest getChest(int);
     Deltoid getDeltoid(int);
-    void operator++();
+    void operator++(); //Sobre carga de operadores
 };
 
 Push::Push(Chest chest1, Chest chest2, Deltoid deltoid1, Deltoid deltoid2, Deltoid deltoid3){

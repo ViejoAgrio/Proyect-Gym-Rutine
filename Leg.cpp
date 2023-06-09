@@ -7,7 +7,7 @@ class Leg{
     Leg();
     Cuadricep getCuadricep(int);
     Twin getTwin();
-    void operator++();
+    void operator++(); //Sobre carga de operadores
 };
 
 Leg::Leg(Cuadricep Cuadricep1, Cuadricep Cuadricep2, Twin Twin1){

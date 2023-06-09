@@ -2,7 +2,7 @@ class Bicep : public Exercise{
     public:
     Bicep();
     Bicep(string, float, int, int);
-    string exerciseType() override;
+    string exerciseType() override; //Sobre escritura
 };
 
 Bicep::Bicep(){
