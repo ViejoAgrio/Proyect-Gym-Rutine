@@ -1,4 +1,4 @@
-# Proyect-TC1030.302 Gym Rutine
+# Proyect Gym Rutine
 
 Context
 
